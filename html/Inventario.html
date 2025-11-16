@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Kapido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(125% 125% at 50% 100%, #5b5f81 40%, rgb(0, 0, 0) 100%);
+            color: white;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 250px;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1{
+            color: #93c5fd;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        aside {
+            grid-area: aside;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+          
+
+        }
+
+        .inventory-icon {
+            max-width: 100px;
+            height: auto;
+            align-self: center;
+            margin-bottom: 30px;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-list li {
+            margin-bottom: 15px;
+        }
+
+        .category-list a {
+            color: #93c5fd;
+            text-decoration: none;
+            display: block;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .category-list a:hover {
+            background: rgba(147, 197, 253, 0.2);
+            border-left-color: #93c5fd;
+            transform: translateX(5px);
+        }
+
+        main {
+            grid-area: main;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        section h2 {
+            color: #93c5fd;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 2px solid rgba(147, 197, 253, 0.3);
+            padding-bottom: 10px;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-3px);
+        }
+
+        article h3 {
+            color: #bfdbfe;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            color: #94a3b8;
+        }
+        
+        .btn-volver {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(147, 197, 253, 0.8);
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .btn-volver:hover {
+            background: rgba(147, 197, 253, 1);
+            transform: translateX(-3px);
+        }
+
+        aside nav ul li{
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.history.back()" class="btn-volver">◀ Volver</button>
+    <header>
+        <img src="../Imagenes/Kpido.png" alt="Kapido Logo" class="logo">
+        <h1>Sistema de Inventario</h1>
+    </header>
+
+    <aside>
+        <img src="../Imagenes/hacer_inventario.png" alt="Hacer Inventario" class="inventory-icon">
+
+        <nav>
+            <ul class="category-list">
+                <li><a href="Lacteos.html">Lácteos</a></li>
+                <li><a href="Charcuteria.html">Charcutería</a></li>
+                <li><a href="Comida_preparada.html">Comida Preparada</a></li>
+                <li><a href="Pescado.html">Pescado</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section>
+            <h2>Gestión de Inventario</h2>
+            <article>
+                <h3>Bienvenido al Sistema de Inventario</h3>
+                <p>Aquí podrás gestionar todos los productos de tu inventario organizados por categorías.</p>
+                <p>Selecciona una categoría del menú lateral para comenzar a explorar los productos disponibles.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Estadísticas Generales</h2>
+            <article>
+                <h3>Resumen del Inventario</h3>
+                <p>Información general sobre el estado actual del inventario:</p>
+                <ul>
+                    <li>Podrás consultar los productos de la misma familia</li>
+                    <li>Consultar la cantidad de stock actual</li>
+                    <li>Ver el control de fechado</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Acciones a Futuro</h2>
+            <article>
+                <h3>Herramientas de Gestión</h3>
+                <p>Funciones principales del sistema de inventario:</p>
+                <ul>
+                    <li>Agregar nuevos productos</li>
+                    <li>Actualizar stock existente</li>
+                    <li>Generar reportes</li>
+                    <li>Configurar alertas de stock bajo</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kapido. Sistema de Gestión de Inventario</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+/* AQUI SOLO ESTÁN LOS STYLOS DE (Gestion_Tareas.html) */
+
+html {
+    height: 100%;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(125% 125% at 50% 100%,
+            #5b5f81 40%,
+            rgb(0, 0, 0) 100%);
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+
+
+
+/* EFECTO TRANSICION DE LAS IMG*/
+article {
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+}
+
+/* Contenedor de la tarjeta */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    
+}
+
+/* Contenedor de imágenes dentro de la tarjeta */
+.card-image {
+    position: relative;
+    width: 100%;
+}
+
+article img:first-child {
+  
+    border-radius: 4px;
+    width: 100%;
+    transition: opacity .3s ease;
+    opacity: 1;
+    
+}
+
+article:hover img:first-child {
+    opacity: 10%;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 0.1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%) rotateY(360deg);
+    
+}
+
+/* FIN - EFECTO TRANSICION DE LAS IMG*/
+
+
+/* ESTRUCTURA PRINCIPAL */
+/* Estilos comunes para todos los contenedores principales */
+
+/* header,
+main,
+footer {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}*/
+
+/* Header: Encabezado superior */
+header {
+    grid-area: header;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo del header */
+header .logo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Aside */
+aside {
+    grid-area: aside;
+    background: transparent;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Main*/
+main {
+    grid-area: main;
+    background: transparent;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section: Contenedor de artículos */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+     gap: 100px;
+}
+
+/* ESTILOS DE CONTENIDO DE TARJETA */
+/* Contenido de la tarjeta (título, texto, botón) */
+.card-content {
+    background: rgba(255, 255, 255, 0.08);
+    color: aliceblue;
+    font-family: Montserrat, sans-serif;
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    
+    
+}
+
+.card-title {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+
+
+
+/* Footer: Pie de página */
+footer {
+    grid-area: footer;
+    background: transparent;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+/* FIN - ESTRUCTURA PRINCIPAL */
+
+/* ESTILOS PARA EL MENÚ */
+/* Checkbox oculto para el menú responsivo */
+.menu-checkbox {
+    display: none;
+    
+}
+
+/* Botón de toggle para abrir/cerrar menú */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Lista del menú */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%
+}
+
+/* Items del menú */
+.menu li {
+    padding: 10px;
+}
+
+/* Enlaces del menú */
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Al pasar el ratón sobre los enlaces */
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
