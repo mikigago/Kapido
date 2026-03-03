@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados - Kapido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: radial-gradient(125% 125% at 50% 100%, #5b5f81 40%, rgb(0, 0, 0) 100%);
+            color: white;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .btn-volver {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(147, 197, 253, 0.8);
+            color: white;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .logo {
+            max-width: 170px;
+            height: auto;
+        }
+
+        h1 {
+            color: #93c5fd;
+            margin: 10px 0 0;
+        }
+
+        .panel {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        th {
+            background: rgba(147, 197, 253, 0.2);
+            color: #bfdbfe;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.history.back()" class="btn-volver">◀ Volver</button>
+
+    <header class="header">
+        <img src="../Imagenes/Kpido.png" alt="Kapido Logo" class="logo">
+        <h1>Gestión de Empleados</h1>
+    </header>
+
+    <main class="panel">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Puesto</th>
+                    <th>Turno</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EMP-001</td>
+                    <td>Miguel Gago</td>
+                    <td>Encargado</td>
+                    <td>Mañana</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>EMP-002</td>
+                    <td>Laura Pérez</td>
+                    <td>Charcutería</td>
+                    <td>Tarde</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>EMP-003</td>
+                    <td>Javier Ruiz</td>
+                    <td>Pescadería</td>
+                    <td>Mañana</td>
+                    <td>Vacaciones</td>
+                </tr>
+                <tr>
+                    <td>EMP-004</td>
+                    <td>Andrea Martín</td>
+                    <td>Reposición</td>
+                    <td>Tarde</td>
+                    <td>Inactivo</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
