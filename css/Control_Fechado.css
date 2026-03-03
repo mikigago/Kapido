@@ -137,3 +137,47 @@ footer {
     margin-top: 20px;
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .btn-volver {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 1000;
+    }
+
+    .header {
+        margin-top: 70px;
+    }
+
+    .logo {
+        max-width: 140px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .table-wrapper {
+        margin: 20px auto;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 760px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .acciones {
+        flex-wrap: wrap;
+    }
+}

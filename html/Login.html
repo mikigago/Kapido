@@ -137,6 +137,47 @@
         .user-icon:hover {
             transform: rotate(360deg);
         }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 0;
+                min-height: 100vh;
+                height: auto;
+                align-items: flex-start;
+                padding: 16px;
+                box-sizing: border-box;
+            }
+
+            .login-container {
+                padding: 24px 16px;
+                border-radius: 20px;
+                width: 100%;
+            }
+
+            .login-header {
+                margin-bottom: 24px;
+            }
+
+            .login-box {
+                padding: 20px 16px;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .linea-separadora {
+                width: 100%;
+                height: 2px;
+            }
+
+            .user-icon {
+                width: 90px;
+                height: 90px;
+            }
+
+            .btn-login {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 

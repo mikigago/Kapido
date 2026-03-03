@@ -60,6 +60,22 @@
         img:hover {
             transform: translateY(-5px);
         }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 16px;
+            }
+
+            main h1 {
+                font-size: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            main img {
+                max-width: min(75vw, 240px);
+            }
+        }
     </style>
 
 </head>

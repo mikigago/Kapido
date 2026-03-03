@@ -162,6 +162,52 @@
             justify-content: center;
             align-items: center;
         }
+
+        @media (max-width: 900px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "aside"
+                    "main"
+                    "footer";
+            }
+
+            .btn-volver {
+                position: fixed;
+                top: 12px;
+                left: 12px;
+                z-index: 1000;
+            }
+
+            header {
+                padding-top: 64px;
+            }
+
+            aside {
+                border-right: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+                padding: 16px;
+            }
+
+            .inventory-icon {
+                margin-bottom: 16px;
+                max-width: 84px;
+            }
+
+            main {
+                padding: 16px;
+            }
+
+            section {
+                padding: 16px;
+                margin-bottom: 20px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 

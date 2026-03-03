@@ -172,6 +172,34 @@
         }
 
         /* FIN - EFECTO TRANSICION DE LAS IMG*/
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+                align-items: flex-start;
+            }
+
+            .btn-volver {
+                position: fixed;
+                top: 12px;
+                left: 12px;
+                z-index: 1000;
+            }
+
+            article {
+                width: min(100%, 360px);
+                height: auto;
+                margin: 72px auto 0;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .card-image {
+                height: 180px;
+            }
+        }
     </style>
 </head>
 
