@@ -1,0 +1,139 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: radial-gradient(125% 125% at 50% 100%, #5b5f81 40%, rgb(0, 0, 0) 100%);
+    color: white;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.btn-volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(147, 197, 253, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: rgba(147, 197, 253, 1);
+    transform: translateX(-3px);
+}
+
+.header {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #93c5fd;
+    font-size: 28px;
+}
+
+p.subtitle {
+    margin-top: 10px;
+    color: #e2e8f0;
+}
+
+.table-wrapper {
+    /* BLOQUE PRINCIPAL:
+       Contenedor central reutilizable */
+    max-width: 1100px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+th {
+    background: rgba(147, 197, 253, 0.2);
+    color: #bfdbfe;
+    font-weight: 700;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.estado {
+    /*ESTADOS DE PRODUCTO:*/
+       
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 6px 10px;
+    display: inline-block;
+    min-width: 110px;
+    color: white;
+}
+
+.optimo {
+    background: rgba(34, 197, 94, 0.7);
+}
+
+.proximo {
+    background: rgba(234, 179, 8, 0.7);
+}
+
+.caducado {
+    background: rgba(220, 38, 38, 0.7);
+}
+
+.acciones {
+    /* ACCIONES:
+       Se usa flex para alinear botones*/
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.acciones button {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-rotar {
+    background: rgba(59, 130, 246, 0.7);
+}
+
+.btn-retirar {
+    background: rgba(220, 38, 38, 0.7);
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 20px;
+    font-size: 14px;
+}

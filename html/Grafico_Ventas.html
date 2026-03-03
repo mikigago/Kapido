@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico de Ventas - Kapido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: radial-gradient(125% 125% at 50% 100%, #5b5f81 40%, rgb(0, 0, 0) 100%);
+            color: white;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .btn-volver {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(147, 197, 253, 0.8);
+            color: white;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-volver:hover {
+            filter: brightness(1.1);
+        }
+
+        .btn-volver:focus,
+        .btn-volver:focus-visible {
+            outline: 2px solid #93c5fd;
+            outline-offset: 2px;
+        }
+
+        .btn-volver:active {
+            transform: scale(0.98);
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .logo {
+            max-width: 170px;
+            height: auto;
+        }
+
+        h1 {
+            color: #93c5fd;
+            margin: 10px 0;
+        }
+
+        .panel {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 24px;
+            height: 260px;
+            margin-top: 20px;
+        }
+
+        .bar {
+            width: 70px;
+            border-radius: 10px 10px 0 0;
+            background: linear-gradient(to top, #60a5fa, #93c5fd);
+            position: relative;
+        }
+
+        .bar span {
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+        }
+
+        .resumen {
+            margin-top: 36px;
+            text-align: center;
+            color: #e2e8f0;
+        }
+
+        .media-box {
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .media-box video {
+            width: min(100%, 720px);
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.history.back()" class="btn-volver">◀ Volver</button>
+
+    <header class="header">
+        <img src="../Imagenes/Kpido.png" alt="Kapido Logo" class="logo">
+        <h1>Grafico de Ventas</h1>
+    </header>
+
+    <main class="panel">
+        <h3>Ejemplo de ventas semanales</h3>
+        <div class="bars">
+            <div class="bar" style="height: 90px;"><span>Lun</span></div>
+            <div class="bar" style="height: 130px;"><span>Mar</span></div>
+            <div class="bar" style="height: 180px;"><span>Mie</span></div>
+            <div class="bar" style="height: 150px;"><span>Jue</span></div>
+            <div class="bar" style="height: 220px;"><span>Vie</span></div>
+            <div class="bar" style="height: 200px;"><span>Sab</span></div>
+            <div class="bar" style="height: 120px;"><span>Dom</span></div>
+        </div>
+        <br>
+        <br>
+        <section class="media-box">
+            <h3>Resumen audiovisual de ventas</h3>
+            <video controls preload="metadata" poster="../Imagenes/LOGO_KAPIDO.png">
+                <source src="../Videos/88697-606080045_small.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <p class="resumen">Pico de ventas detectado en viernes y sábado.</p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Fechado - Kapido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Control_Fechado.css">
+</head>
+
+<body>
+    <button onclick="window.history.back()" class="btn-volver">◀ Volver</button>
+
+    <header class="header">
+        <img src="../Imagenes/Kpido.png" alt="Kapido Logo" class="logo">
+        <h1>Control de Fechado</h1>
+        <p class="subtitle">Ejemplo de revisión de fechas de caducidad en varios productos.</p>
+    </header>
+
+    <main class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Lote</th>
+                    <th>Fecha de envasado</th>
+                    <th>Fecha de caducidad</th>
+                    <th>Días restantes</th>
+                    <th>Estado</th>
+                    <th>Acciones sugeridas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Yogur natural</td>
+                    <td>LAC-2401</td>
+                    <td>12/02/2026</td>
+                    <td>24/02/2026</td>
+                    <td>4</td>
+                    <td><span class="estado proximo">Proximo</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pechuga cocida</td>
+                    <td>CHA-1020</td>
+                    <td>15/02/2026</td>
+                    <td>22/02/2026</td>
+                    <td>2</td>
+                    <td><span class="estado proximo">Proximo</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ensaladilla preparada</td>
+                    <td>PRE-7782</td>
+                    <td>17/02/2026</td>
+                    <td>21/02/2026</td>
+                    <td>1</td>
+                    <td><span class="estado proximo">Proximo</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salmón marinado</td>
+                    <td>PES-5531</td>
+                    <td>10/02/2026</td>
+                    <td>19/02/2026</td>
+                    <td>0</td>
+                    <td><span class="estado caducado">Caducado</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Queso semicurado</td>
+                    <td>LAC-9933</td>
+                    <td>05/02/2026</td>
+                    <td>04/03/2026</td>
+                    <td>13</td>
+                    <td><span class="estado optimo">Optimo</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Petitsuis</td>
+                    <td>LAC-1107</td>
+                    <td>18/02/2026</td>
+                    <td>27/02/2026</td>
+                    <td>7</td>
+                    <td><span class="estado optimo">Optimo</span></td>
+                    <td class="acciones">
+                        <button class="btn-rotar">Rotar</button>
+                        <button class="btn-retirar">Retirar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        &copy; 2026 Kapido - Control de fechado
+    </footer>
+</body>
+
+</html>
